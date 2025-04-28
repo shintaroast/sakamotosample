@@ -1,0 +1,427 @@
+@charset "UTF-8";
+/* CSS Document */
+.section_mv {
+  height: 770px;
+  background-image: image-set(url("../images/top/mv-bg.jpg") 1x, url("../images/top/mv-bg@2x.jpg") 2x );
+  background-image: -webkit-image-set(url("../images/top/mv-bg.jpg") 1x, url("../images/top/mv-bg@2x.jpg") 2x );
+  background-repeat: no-repeat;
+  background-position: center bottom ;
+  background-size: cover;
+  margin: 0 auto;
+  padding: 60px;
+}
+@media (max-width:767px) {
+  .section_mv {
+    height: 550px;
+    background-image: image-set(url("../images/top/sp_mv-bg.jpg") 1x, url("../images/top/sp_mv-bg@2x.jpg") 2x );
+    background-image: -webkit-image-set(url("../images/top/sp_mv-bg.jpg") 1x, url("../images/top/sp_mv-bg@2x.jpg") 2x );
+    background-position: left center;
+    padding: 40px 20px;
+  }
+}
+.section_mv {
+  display: flex;
+}
+.mv_container {
+  margin: 0 auto;
+  max-width: 1150px;
+  width: calc(100% - (20px * 2));
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+}
+.mv_container h2 img{
+  display: block;
+  margin-bottom: 100px;
+}
+.mv-reserve {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 266px;
+  height: 162px;
+  z-index: 0;
+}
+.mv-reserve_link {
+  display: block;
+}
+.batsu_btn {
+  display: block;
+  position: absolute;
+  padding: 0;
+  border: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #A0203F;
+  top: calc(-34px / 2);
+  right: calc(-34px / 2);
+  z-index: 1;
+}
+.batsu_btn::before, .batsu_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 19px;
+  background: #ffffff;
+}
+.batsu_btn::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+ 
+.batsu_btn::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+@media(max-width:1100px) {
+  .mv_container {
+    align-items: flex-start;
+  }
+  .batsu_btn {
+    width: 25px;
+    height: 25px;
+  }
+  .mv-reserve {
+    width: 189px;
+    height: 175px;
+  }
+}
+.mv-reserve img {
+  transition: 0.3s;
+}
+.mv-reserve img:hover {
+  opacity: 0.6;
+}
+.mv-reserve.js_close {
+  display: none;
+}
+/*コンセプト*/
+.concept_container {
+  background-image: image-set(url("../images/top/concept.jpg") 1x, url("../images/top/concept@2x.jpg") 2x );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-bottom: 100px;
+  position: relative;
+}
+.concept_container::before {
+  content: '';
+  left: 0;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(43, 43, 43, 1), rgba(255, 255, 255, 0));
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.concept_photo {
+  z-index: 0;
+  position: relative;
+}
+.concept_photo img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+.concept_text-area {
+  padding: 60px;
+  position: relative;
+  z-index: 2;
+}
+.concept_container-text {
+  font-family: "Noto Serif JP";
+  color: #FFFFFF;
+}
+.concept-title {
+  font-size: 40px;
+}
+.concept_text {
+  padding-top: 80px;
+}
+.concept-list_link {
+  border: 2px solid #FFFFFF;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  margin-top: 80px;
+  width: 370px;
+  color: #FFF;
+  text-decoration: none;
+}
+.concept-list_link:hover {
+  background: #FFF;
+  color: #333333;
+}
+/*.concept-list_link a {
+  text-decoration: none;
+}
+.concept-list_link a:hover {
+  cursor: pointer;
+  color: #333333;
+}*/
+.concept-link_text {
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.concept-list_link svg path {
+  transition: .3s stroke;
+}
+.concept-list_link:hover svg path {
+  stroke: #333333;
+}
+@media(max-width:1100px) {
+  .concept_text {
+    padding-top: 30px;
+  }
+  .concept_text-area {
+    padding: 60px 15px;
+  }
+  .concept-title {
+    font-size: 28px;
+  }
+  .concept-list_link {
+    margin-top: 80px;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .concept-link_text {
+    font-size: 16px;
+  }
+}
+/*外観・内装*/
+.bg_features {
+  background: #292929;
+}
+/*価格•グレード　中身*/
+.specifications_list-item a {
+  background-image: linear-gradient(135deg, rgba(134, 134, 134, 1) 4%, rgba(73, 73, 73, 1) 35%, rgba(49, 49, 49, 1) 75%);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  text-decoration: none;
+}
+.car-title {
+  display: flex;
+  color: #FFFFFF;
+  font-family: "Noto Serif JP";
+  justify-content: center;
+  align-items: baseline;
+}
+.car-title-main {
+  font-size: 30px;
+}
+.car-title-sub {
+  font-size: 16px;
+}
+.car-tag {
+  display: flex;
+  color: #FFFFFF;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.car-tag p {
+  border: 1px solid #FFFFFF;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.specifications-text {
+  display: flex;
+  color: #FFFFFF;
+  align-items: baseline;
+}
+.specifications-text span {
+  font-size: 18px;
+}
+.specifications-text p {
+  font-size: 14px;
+}
+.specifications-number {
+  display: flex;
+  color: #FFFFFF;
+  justify-content: center;
+  align-items: baseline;
+  gap: 5px;
+  letter-spacing: 2px;
+}
+.specifications-number span {
+  font-size: 35px;
+}
+.specifications-number p {
+  font-size: 18px;
+}
+.specifications_list-item-block {
+  display: flex;
+  gap: 90px;
+  margin-top: 25px;
+}
+@media(max-width:767px) {
+  .specifications_list-item a {
+    padding: 30px;
+  }
+  .car-title-main {
+    font-size: 25px;
+  }
+  .car-title-sub {
+    font-size: 12px;
+  }
+  .car-tag {
+    margin-bottom: 10px;
+  }
+  .car-tag p {
+    font-size: 12px;
+  }
+  .specifications-text {
+    align-items: center;
+    flex-direction: column;
+  }
+  .specifications-text span {
+    font-size: 16px;
+  }
+  .specifications-text p {
+    font-size: 12px;
+  }
+  .specifications-number span {
+    font-size: 30px;
+  }
+  .specifications-number p {
+    font-size: 12px;
+  }
+  .specifications_list-item-block {
+    gap: 60px;
+  }
+}
+.features_list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.features_list-item {
+  background-image: image-set(url(../images/common/exteior.jpg) 1x, url(../images/common/exteior@2x.jpg) 2x);
+  min-height: 430px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  padding: 30px;
+  background-size: cover;
+  width: 100%;
+}
+.features_list-item2 {
+  background-image: image-set(url(../images/common/function.jpg) 1x, url(../images/common/function@2x.jpg) 2x);
+  min-height: 290px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  padding: 30px;
+  background-size: cover;
+  width: calc(50% - (30px * 2));
+}
+.features_list-item3 {
+  background-image: image-set(url(../images/common/safe.jpg) 1x, url(../images/common/safe@2x.jpg) 2x);
+  min-height: 290px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  padding: 30px;
+  background-size: cover;
+  width: calc(50% - (30px * 2));
+}
+@media(max-width:767px) {
+  .features_list-item {
+    background-image: -webkit-image-set(url(../images/common/sp-exteior.jpg) 1x, url(../images/common/sp-exteior@2x.jpg) 2x);
+    min-height: 400px;
+  }
+  .features_list-item2 {
+    background-image: -webkit-image-set(url(../images/common/sp-function.jpg) 1x, url(../images/common/sp-function@2x.jpg) 2x);
+    width: 100%;
+    min-height: 400px;
+  }
+  .features_list-item3 {
+    background-image: -webkit-image-set(url(../images/common/sp-safe.jpg) 1x, url(../images/common/sp-safe@2x.jpg) 2x);
+    width: 100%;
+    min-height: 400px;
+  }
+}
+.features_list-title {
+  color: #FFF;
+  font-family: "Noto Serif JP";
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.features_list-text {
+  color: #FFF;
+  font-size: 16px;
+}
+.features-list_link {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+.features-list_link span {
+  color: #FFF;
+  border: 1px solid #FFF;
+  width: 220px;
+  height: 50px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: rgba(56, 56, 56, 0.3);
+}
+.features-list_link span:hover {
+  background: #FFF;
+  color: #333333;
+}
+@media(max-width:767px) {
+  .features-list_link span {
+    width: 100%;
+  }
+}
+/*バナー*/
+.banner {
+  display: flex;
+  justify-content: center;
+}
+.banner img {
+  width: 100%;
+}
+/*お知らせ*/
+.bg_news {
+  background: #F2F2F2;
+}
+.news_list {
+  display: flex !important;
+}
+.title_news {
+  color: #363636;
+  margin-bottom: 50px;
+}
+.news_list .slick-dots li button:before {
+  color: #333333;
+  font-size: 20px;
+}
+.news_link .slick-dots li.slick-active button:before {
+  color: #333333;
+  opacity: 1;
+}
+.news_list .slick-arrow.prev-arrow span::before {
+  border-top: solid 2px #333333;
+  border-right: solid 2px #333333;
+}
+.news_list .slick-arrow.next-arrow span::before {
+  border-top: solid 2px #333333;
+  border-right: solid 2px #333333;
+}
